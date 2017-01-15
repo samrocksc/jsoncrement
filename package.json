@@ -1,12 +1,12 @@
 {
-  "name": "helper",
+  "name": "lowdb-iterator",
   "version": "1.0.0",
-  "description": "",
+  "description": "iterating an object in a lowdb json",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sam C.",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
