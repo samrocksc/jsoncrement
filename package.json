@@ -1,7 +1,7 @@
 {
-  "name": "lowdb-iterator",
+  "name": "oterator",
   "version": "1.0.0",
-  "description": "iterating an object in a lowdb json",
+  "description": "ITERATES AN OBJECT!!!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,7 @@
   "author": "Sam C.",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.4",
-    "lowdb": "^0.14.0"
+    "debug": "^2.6.0",
+    "lodash": "^4.17.4"
   }
 }

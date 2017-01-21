@@ -1,15 +1,20 @@
-const db = require('./db.js');
 const { max, map, assign } = require('lodash');
+const debug = require('debug')('iterator');
 
-module.exports = {
-  function iterate(table, data) {
-    let newId;
-    const tableData = db.get(table).value();
-    const maxId = max(map(tableData, 'id'));
-    const payload = assign(data, { id: maxId + 1 })
+const index = {
+  iterate: (dataSet, field, data) => {
+    const dataMap = map(dataSet, field);
+    const dataField = field;
+    const maxId = max(dataMap);
+    const newId = parseInt(maxId, 10) + 1;
+    const payload = assign(data, { [dataField]: newId });
     if (payload) {
-      return payload
+      debug(payload);
+      return payload;
     }
-    return 'There was an error';
-  }
-}
+    debug('error');
+    return ('There was an error');
+  },
+};
+
+module.exports = index;
