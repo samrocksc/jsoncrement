@@ -1,5 +1,4 @@
 const { iterate } = require('./index');
-const debug = require('debug')('iterator');
 
 const dataSet = [
   {
@@ -30,3 +29,5 @@ const person = {
 const blah = iterate(dataSet, 'id', person);
 
 console.log('here is the result', blah);
+
+// This will give you an object with the next id of 5
